@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+<body>
+
+<header>
+  <h1>じゃんけん☆3勝</h1>
+  <p style="height: 40px; text-align: center; font-size: 15px;">最後に勝てればOKなの(´∀｀)</p>
+</header>
+
+<main>
+  <ul>
+    <li id="gu_btn">
+      <img src="img/黒グー.png">
+    </li>
+    <li id="cho_btn">
+      <img src="img/黒チョキ.png">
+    </li>
+    <li id="par_btn">
+      <img src="img/黒パー.png">
+    </li>
+  </ul>
+  <div class = "battlebox1">
+    <div class = aite>o(｀ω´ )<span id="pc_hands"> {じゃ〜んけ〜ん</span></div>
+  </div>
+  <div class = "battlebox2">
+    <div class = "hanteibox" >
+      <span id="judgment">判定</span>
+      <span>勝ち数:<span id="win_cnt"></span></span>
+    </div>
+  </div>
+  <div id = "image_place"></div>
+  <a href="file:///Users/sugieayami/Desktop/Gs/js01_haifu/kadai/janken_tpl.html" class="button">RESET</a>
+</main>
+
+<footer></footer>
+<script>
+//じゃんけん用のSCRIPTを書いてください
+
+//勝ち数のクリア
+let i = 0;
+$("#win_cnt").html(i); 
+
+var img = "";
+
+//グーを押した場合
+$("#gu_btn").on("click",function(){
+    const num = Math.ceil( Math.random() * 3 );
+    console.log(num);
+
+  if(num == 1){
+  //  $("#pc_hands").html("グー");
+    document.getElementById('pc_hands').innerHTML = '<img src="img/札グー.png">';
+    $("#judgment").html("あいこ");
+    const hand = document.getElementById('pc_hands');
+    const g_btn = document.getElementById('gu_btn');
+    const judge = document.getElementById('judgment');
+    console.log(hand);
+    console.log(g_btn);
+    console.log(judge);
+    }
+  if(num == 2){
+    //$("#pc_hands").html("チョキ");
+    document.getElementById('pc_hands').innerHTML = '<img src="img/札チョキ.png">';
+    $("#judgment").html("勝ち");
+    i++;
+    const hand = document.getElementById('pc_hands');
+    const g_btn = document.getElementById('gu_btn');
+    const judge = document.getElementById('judgment');
+    console.log(hand);
+    console.log(g_btn);
+    console.log(judge);
+    console.log(i);
+    }    
+  if(num == 3){
+    //$("#pc_hands").html("パー");
+    document.getElementById('pc_hands').innerHTML = '<img src="img/札パー.png">';
+    $("#judgment").html("負け");
+    const hand = document.getElementById('pc_hands');
+    const g_btn = document.getElementById('gu_btn');
+    const judge = document.getElementById('judgment');
+    console.log(hand);
+    console.log(g_btn);
+    console.log(judge);
+  }
+  $("#win_cnt").html(i);
+
+  //勝ち数3の場合くまお登場
+  if(i == 3){
+    document.getElementById('image_place').innerHTML = '<img src="https://img.gifmagazine.net/gifmagazine/images/4244347/original.gif" alt="くまお">';
+    console.log(image_place.src);
+  }
+
+});
+
+//チョキを押した場合
+$("#cho_btn").on("click",function(){
+    const num = Math.ceil( Math.random() * 3 );
+    console.log(num);
+
+  if(num == 1){
+  //  $("#pc_hands").html("グー");
+  document.getElementById('pc_hands').innerHTML = '<img src="img/札グー.png">';
+    $("#judgment").html("負け");
+    const hand = document.getElementById('pc_hands');
+    const c_btn = document.getElementById('cho_btn');
+    const judge = document.getElementById('judgment');
+    console.log(hand);
+    console.log(c_btn);
+    console.log(judge);
+    }
+  if(num == 2){
+    //$("#pc_hands").html("チョキ");
+    document.getElementById('pc_hands').innerHTML = '<img src="img/札チョキ.png">';
+    $("#judgment").html("あいこ");
+    const hand = document.getElementById('pc_hands');
+    const c_btn = document.getElementById('cho_btn');
+    const judge = document.getElementById('judgment');
+    console.log(hand);
+    console.log(c_btn);
+    console.log(judge);
+    }    
+  if(num == 3){
+    //$("#pc_hands").html("パー");
+    document.getElementById('pc_hands').innerHTML = '<img src="img/札パー.png">';
+    $("#judgment").html("勝ち");
+    i++;
+    const hand = document.getElementById('pc_hands');
+    const c_btn = document.getElementById('cho_btn');
+    const judge = document.getElementById('judgment');
+    console.log(hand);
+    console.log(c_btn);
+    console.log(judge);
+    console.log(i);
+  }
+  $("#win_cnt").html(i);
+
+  //勝ち数3の場合くまお登場
+  if(i == 3){
+      document.getElementById('image_place').innerHTML = '<img src="https://img.gifmagazine.net/gifmagazine/images/4244347/original.gif" alt="くまお">';
+      console.log(image_place.src);
+    }
+
+});
+
+
+//パーを押した場合
+$("#par_btn").on("click",function(){
+    const num = Math.ceil( Math.random() * 3 );
+    console.log(num);
+
+  if(num == 1){
+  //  $("#pc_hands").html("グー");
+  document.getElementById('pc_hands').innerHTML = '<img src="img/札グー.png">';
+    $("#judgment").html("勝ち");
+    i++;
+    const hand = document.getElementById('pc_hands');
+    const p_btn = document.getElementById('par_btn');
+    const judge = document.getElementById('judgment');
+    console.log(hand);
+    console.log(p_btn);
+    console.log(judge);
+    console.log(i);
+    }
+  if(num == 2){
+    //$("#pc_hands").html("チョキ");
+    document.getElementById('pc_hands').innerHTML = '<img src="img/札チョキ.png">';
+    $("#judgment").html("負け");
+    const hand = document.getElementById('pc_hands');
+    const p_btn = document.getElementById('par_btn');
+    const judge = document.getElementById('judgment');
+    console.log(hand);
+    console.log(p_btn);
+    console.log(judge);
+    }    
+  if(num == 3){
+    //$("#pc_hands").html("パー");
+    document.getElementById('pc_hands').innerHTML = '<img src="img/札パー.png">';
+    $("#judgment").html("あいこ");
+    const hand = document.getElementById('pc_hands');
+    const p_btn = document.getElementById('par_btn');
+    const judge = document.getElementById('judgment');
+    console.log(hand);
+    console.log(p_btn);
+    console.log(judge);
+  }
+  $("#win_cnt").html(i);
+
+  //勝ち数3の場合くまお登場
+  if(i == 3){
+      document.getElementById('image_place').innerHTML = '<img src="https://img.gifmagazine.net/gifmagazine/images/4244347/original.gif" alt="くまお">';
+    }
+
+});
+
+//ボタン非表示→なし
+//if(i < 3){
+  //body.button.style.display = 'none';
+  //document.getElementById('button').innerHTML = '<'
+  //location.href="file:///Users/sugieayami/Desktop/Gs/js01_haifu/kadai/janken_tpl.html";
+//}
+
+</script>
+</body>
+</html>

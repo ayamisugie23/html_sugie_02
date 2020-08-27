@@ -1,0 +1,148 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:center;
+    font-size: 32px;
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+header h1{
+    font-size: 40px;
+}
+
+main{
+    border-bottom:1px solid #ccc;
+}
+
+/*    main img{
+        width: 50px; height: 70px;
+    }
+*/
+
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+p{
+    font-size:200%;
+    text-align: center;
+    border-bottom:1px solid #fff;
+    height:200px;
+}
+ul{
+    padding: 0;
+    border-top: 1px solid #000000;
+    display:table;  /* 定義 */
+    table-layout: fixed;
+    width:100%;
+}
+li{
+    height: 100px;
+    text-align: center;
+    list-style-type:none;
+    border: 1px solid #666;
+    background-color: #FFF;
+    display:table-cell;  /* 定義 */
+    cursor: pointer;
+}
+
+li img{
+    width: 100px;
+    height: 100px;
+}
+
+#gu_btn:hover{
+    background: yellow;
+    color:#fff;
+}
+
+#cho_btn:hover{
+    background: red;
+    color:#fff;
+}
+
+#par_btn:hover{
+    background: #0066CC;
+    color:#fff;
+}
+
+.battlebox1{
+    height: 50px;
+    display: flex;
+    padding-top: 100px;
+}
+
+.aite{
+    font-size: 40px;
+    width: 600px;
+    height: 200px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    vertical-align: middle;
+}
+
+#pc_hands{
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+#pc_hands img{
+    width: 50px;
+    height: 70px;
+    vertical-align: middle;
+}
+
+.battlebox2{
+    width: 500px;
+    height: 100px;
+    position: relative;
+    display: inline-block;
+}
+
+.hanteibox{
+    width: 300px;
+    text-align: center;
+    display: flex;
+    padding-left: 150px;
+}
+
+.hanteibox span{
+    text-align: center;
+    display: flex;    
+}
+
+.kachisubox{
+    width: 200px;
+    text-align: center;
+}
+
+#judgment{
+    width: 100px;
+}
+
+.button{
+    display: inline-block;
+    max-width: 180px;
+    text-align: left;
+    background-color: #ffa300;
+    font-size: 16px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 4px;
+    border-bottom: 4px solid #d37800;
+}
+
+.button:active {
+    transform: translateY(4px);
+    border-bottom: none;
+}
